@@ -1,0 +1,15 @@
+<div class="nested-fields form-horizontal ">
+
+  <div class="col-md-6">
+    <label>Sprache:</label>
+    <%= f.text_field :name, class: 'ever-inputs', placeholder: 'Deutsch / Englisch'%>
+  </div>
+  <div class="col-md-6 ">
+    <label>Nieveu:</label>
+    <%= f.text_field :level, class: 'ever-inputs', placeholder: 'C1 / Fließend' %>
+    <%= link_to_remove_association 'Löschen', f, class: 'btn btn-danger btn-lg pull-right title' %>
+  </div>
+
+  <hr class="col-md-10 col-md-offset-1">
+
+</div>

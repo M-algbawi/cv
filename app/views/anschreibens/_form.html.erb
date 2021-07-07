@@ -1,0 +1,55 @@
+<%= form_for(@anschreiben) do |f| %>
+  <% if @anschreiben.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@anschreiben.errors.count, "error") %> prohibited this anschreiben from being saved:</h2>
+
+      <ul>
+      <% @anschreiben.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="jumbotron">
+  <div class="row">
+  <div class="column">
+  <div class="field">
+    <label>Dein Name</label>
+    <%= f.text_field :name, placeholder: 'Monther' %>
+  </div>
+  <div class="field">
+    <label>Straße und Haus Nr.</label>
+    <%= f.text_field :address, placeholder: 'Müllerstr. 164' %>
+  </div>
+  <div class="field">
+    <label>PLZ Stadt</label>
+    <%= f.text_field :stadt, placeholder: ' 13403- Berlin' %>
+  </div>
+  <div class="field">
+    <label>Dein Kompetenzen</label>
+    <%= f.text_area :kompetenzen, placeholder: 'Erfahrung mit 5 Jahren als Empfangsmitarbeiter im Hotel..' %>
+  </div>
+  </div>
+  <div class="column">
+     <div class="field">
+    <label>Bewerbung als </label>
+    <%= f.text_field :bewerbungals, placeholder: 'Empfangsmitarbeiter' %>
+  </div>
+  <div class="field">
+    <label>Unternehme</label>
+    <%= f.text_field :firmaname, placeholder: 'BMW GmbH' %>
+  </div>
+  <div class="field">
+    <label>Unternehme Adress</label>
+    <%= f.text_field :firmaaddress, placeholder: 'Meller Str. 20' %>
+  </div>
+  <div class="field">
+    <label>Unternehme Stadt</label>
+    <%= f.text_field :firmastadt, placeholder: '13202- Berlin '%>
+  </div>
+  </div></div>
+</div>
+<div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

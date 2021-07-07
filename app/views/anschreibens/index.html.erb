@@ -1,0 +1,43 @@
+<!--
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Anschreibens</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Stadt</th>
+      <th>Bewerbungals</th>
+      <th>Kompetenzen</th>
+      <th>Firmaname</th>
+      <th>Firmaaddress</th>
+      <th>Firmastadt</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @anschreibens.each do |anschreiben| %>
+      <tr>
+        <td><%= anschreiben.name %></td>
+        <td><%= anschreiben.address %></td>
+        <td><%= anschreiben.stadt %></td>
+        <td><%= anschreiben.bewerbungals %></td>
+        <td><%= anschreiben.kompetenzen %></td>
+        <td><%= anschreiben.firmaname %></td>
+        <td><%= anschreiben.firmaaddress %></td>
+        <td><%= anschreiben.firmastadt %></td>
+        <td><%= link_to 'Show', anschreiben %></td>
+        <td><%= link_to 'Edit', edit_anschreiben_path(anschreiben) %></td>
+        <td><%= link_to 'Destroy', anschreiben, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Anschreiben', new_anschreiben_path %>
+-->

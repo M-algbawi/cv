@@ -1,0 +1,35 @@
+<div class="nested-fields form-horizontal">
+
+      <div class="col-md-6">
+        <label>Anfang:</label>
+        <%= f.text_field :date_from, class: 'ever-inputs datetimepicker', placeholder: 'Datum' %><br>
+        <label>Bis</label>
+        <%= f.text_field :date_to, class: 'ever-inputs datetimepicker', placeholder: 'Bis' %>
+      </div>
+
+      <div class=" col-md-6">
+       <label>Title des Job/ Position</label>
+        <%= f.text_field :position, class: 'ever-inputs', placeholder: 'Position'%>
+        <label>Unternehme</label>
+        <%= f.text_field :firm, class: 'ever-inputs', placeholder: 'Unternehme / BMW GmbH...'%>
+      </div>
+
+      <div class=" col-md-12">
+        <label>Wo:</label>
+        <%= f.text_field :place, class: 'ever-inputs', placeholder: 'Berlin / Bonn'  %>
+        <%= link_to_remove_association 'Löschen', f, class: 'btn btn-danger btn-lg pull-right title' %>
+      </div>
+
+  <hr class="col-md-10 col-md-offset-1">
+
+</div>
+
+<script type="text/javascript">
+  $(function () {
+    $('.datetimepicker').datetimepicker({
+      viewMode: 'years',
+      format: 'MM/YYYY'
+    });
+  });
+</script>
+

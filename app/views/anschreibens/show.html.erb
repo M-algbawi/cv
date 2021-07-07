@@ -1,0 +1,22 @@
+  <div class="jumbotorn">
+    <div class="row">
+
+  <p> <%= @anschreiben.name %></p>
+
+  <%= @anschreiben.address %>
+
+  <%= @anschreiben.stadt %>
+  <%= @anschreiben.bewerbungals %>
+
+  <%= @anschreiben.kompetenzen %>
+
+  <%= @anschreiben.firmaname %>
+
+  <%= @anschreiben.firmaaddress %>
+
+  <%= @anschreiben.firmastadt %>
+  </div>
+</div>
+
+<%= link_to 'Edit', edit_anschreiben_path(@anschreiben) %> |
+<%= link_to 'Back', anschreibens_path %>

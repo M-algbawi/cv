@@ -1,0 +1,35 @@
+<div class="nested-fields form-horizontal">
+
+    <div class="col-md-6">
+      <label>Anfang</label>
+        <%= f.text_field :date_from, class: 'ever-inputs datetimepicker', placeholder: 'Date from' %><br>
+        <label>Abschluss Jahr</label>
+        <%= f.text_field :date_to, class: 'ever-inputs datetimepicker', placeholder: 'Date to' %>
+    </div>
+
+    <div class="col-md-6">
+      <label>Bachelor / Master </label>
+      <%= f.text_field :level, class: 'ever-inputs', placeholder: 'Bachelor / Master '  %><br>
+      <label>Unversität- Hochschule</label>
+      <%= f.text_field :place, class: 'ever-inputs', placeholder: 'Berlin Unversität'  %>
+    </div>
+
+    <div class="col-md-12">
+      <label>Beschreibung </label>
+      <%= f.text_area :description, class: 'ever-inputs', placeholder: 'Literatur / Informatik' %>
+      <%= link_to_remove_association 'Löschen', f, class: 'btn btn-danger btn-lg pull-right title' %>
+    </div>
+
+  <hr class="col-md-10 col-md-offset-1">
+
+</div>
+
+<script type="text/javascript">
+  $(function () {
+    $('.datetimepicker').datetimepicker({
+      viewMode: 'years',
+      format: 'MM/YYYY'
+    });
+  });
+</script>
+

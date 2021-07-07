@@ -1,0 +1,31 @@
+// Place all the styles related to the anschreibens controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+input[type=text], input[type=email], input[type=password], textarea {
+    border: none;
+    border-bottom: 1px solid black;
+    border-radius: 0;
+    box-shadow: none;
+    display: block;
+    width: 100%;
+    outline: none;
+    padding: 12px;
+}
